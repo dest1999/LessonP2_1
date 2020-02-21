@@ -35,10 +35,22 @@ namespace Asteroids
         {
             Pos.X = Pos.X + Dir.X;
             Pos.Y = Pos.Y + Dir.Y;
-            if (Pos.X < 0) Dir.X = -Dir.X;
-            if (Pos.X > Game.Width) Dir.X = -Dir.X;
-            if (Pos.Y < 0) Dir.Y = -Dir.Y;
-            if (Pos.Y > Game.Height) Dir.Y = -Dir.Y;
+            if (Pos.X < 0)//ушли влево
+            {
+                Pos.X = Game.Width;
+            }
+            if (Pos.X > Game.Width)//ушли вправо
+            {
+                Pos.X = 0;// - Size.Width;
+            }
+            if (Pos.Y < 0)//ушли вверх
+            {
+                Pos.Y = Game.Height;
+            }
+            if (Pos.Y > Game.Height)//ушли вниз
+            {
+                Pos.Y = 0;// - Size.Height;
+            }
         }
     }
 
@@ -58,7 +70,12 @@ namespace Asteroids
         public override void Update()
         {
             Pos.X = Pos.X - Dir.X;
-            if (Pos.X < 0) Pos.X = Game.Width + Size.Width;
+            if (Pos.X < 0)
+            {
+                Pos.X = Game.Width + Size.Width;
+                Random rnd = new Random();
+                Pos.Y = rnd.Next(Game.Height);
+            }
         }
     }
 

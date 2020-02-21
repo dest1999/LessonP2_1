@@ -54,13 +54,16 @@ namespace Asteroids
 
         public static void Load()
         {
+            Random rnd = new Random();
+
+
             _objs = new BaseObject[30];
-            for (int i = 0; i < 10; i++)
-                _objs[i] = new Star(new Point(600, i * 20), new Point(15 - i, 15 - i+1), new Size(5, 5));
-            for (int i = 10;i<20; i++)
-                _objs[i] = new BaseObject(new Point(600, i * 20), new Point(15 - i, 15 - i + 1), new Size(20, 20));
-            for (int i = 20; i < 30; i++)
-                _objs[i] = new Asteroid(new Point(600, i * 20), new Point(15 - i, 15 - i + 1), new Size(20, 20));
+            for (int i = 0; i < 20; i++)
+                _objs[i] = new Star(new Point(rnd.Next(Game.Width), rnd.Next(Game.Height)), new Point(10 + rnd.Next(5), 0), new Size(5, 5));//появление звезд случайно, движение параллельно
+            /*for (int i = 10;i<20; i++)
+                _objs[i] = new BaseObject(new Point(600, i * 20), new Point(15 - i, 15 - i + 1), new Size(20, 20));*/
+            for (int i = 20; i < _objs.Length ; i++)
+                _objs[i] = new Asteroid(new Point(rnd.Next(Game.Width), rnd.Next(Game.Height)), new Point(15 - i, 15 - i + 1), new Size(20, 20));
         }
 
         public static void Draw()
