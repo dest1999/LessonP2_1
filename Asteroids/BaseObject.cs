@@ -24,7 +24,6 @@ namespace Asteroids
             Size = new Size(width,height);
         }
 
-
         public virtual void Draw()
         {
             Game.Buffer.Graphics.DrawEllipse(Pens.White, Pos.X, Pos.Y, Size.Width, Size.Height);
