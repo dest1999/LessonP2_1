@@ -30,7 +30,6 @@ namespace Asteroids
             Game.Buffer.Graphics.DrawEllipse(Pens.White, Pos.X, Pos.Y, Size.Width, Size.Height);
         }
 
-
         public virtual void Update()
         {
             Pos.X = Pos.X + Dir.X;
