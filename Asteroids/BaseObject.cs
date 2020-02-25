@@ -4,7 +4,7 @@ using System.Drawing;
 namespace Asteroids
 {
 
-    class BaseObject
+    abstract class BaseObject
     {
         protected Point Pos;
         protected Point Dir;
@@ -28,29 +28,9 @@ namespace Asteroids
         {
             Game.Buffer.Graphics.DrawEllipse(Pens.White, Pos.X, Pos.Y, Size.Width, Size.Height);
         }
-
-        public virtual void Update()
-        {
-            Pos.X = Pos.X + Dir.X;
-            Pos.Y = Pos.Y + Dir.Y;
-            if (Pos.X < 0)//ушли влево
-            {
-                Pos.X = Game.Width;
-            }
-            if (Pos.X > Game.Width)//ушли вправо
-            {
-                Pos.X = 0;// - Size.Width;
-            }
-            if (Pos.Y < 0)//ушли вверх
-            {
-                Pos.Y = Game.Height;
-            }
-            if (Pos.Y > Game.Height)//ушли вниз
-            {
-                Pos.Y = 0;// - Size.Height;
-            }
-        }
+        public abstract void Update();//метод переделан в абстрактный
     }
+
 
     class Star: BaseObject
     {
@@ -82,6 +62,20 @@ namespace Asteroids
 
         public Asteroid(Point pos, Point dir, Size size) : base(pos, dir, size)
         {
+        }
+
+        public override void Update()// здесь я использовал "override", хотя среда еще говорит о "new". В чём разница между этими объявлениями?
+        {
+            Pos.X = Pos.X + Dir.X;
+            Pos.Y = Pos.Y + Dir.Y;
+                if (Pos.X < 0)          //ушли влево
+            Pos.X = Game.Width;
+                if (Pos.X > Game.Width) //ушли вправо
+            Pos.X = 0;
+                if (Pos.Y < 0)          //ушли вверх
+            Pos.Y = Game.Height;
+                if (Pos.Y > Game.Height)//ушли вниз
+            Pos.Y = 0;
         }
 
         public override void Draw()
