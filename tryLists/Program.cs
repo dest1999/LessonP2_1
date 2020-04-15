@@ -14,7 +14,6 @@ namespace tryLists
         {
             this.DepartmentName = departmentName;
         }
-
     }
 
     struct Address
@@ -36,6 +35,10 @@ namespace tryLists
         {
             Console.WriteLine("Testing Write from HumanClass");
         }
+
+
+
+
     }
 
 
@@ -65,28 +68,35 @@ namespace tryLists
             Console.WriteLine("Testing Write from EmployeeClass");
             base.TestingWrite();
         }
-
-        
-
     }
 
-    public class TClass
-    {
-
-    }
 
 
     class Program
     {
-
+        class Tst
+        {
+            public void printFromTstClass()
+            {
+                Console.WriteLine("this Line is printFromTstClass from testClass");
+                Console.ReadKey();
+            }
+        }
 
 
         static void Main(string[] args)
         {
 
+            Tst tst = new Tst();
+            tst.printFromTstClass();
+
+            SortedList<uint, Employee> sortedListEmployees = new SortedList<uint, Employee>();
+
+            sortedListEmployees.Add(1, new Employee("Alice", 49));
+            sortedListEmployees.Add(2, new Employee("Helene", 24));
+            sortedListEmployees.Add(5, new Employee("Dorothy", 55));
+
             
-
-
 
             List<Employee> employees = new List<Employee>
             {
@@ -108,8 +118,16 @@ namespace tryLists
 
             employees[0].TestingWrite();
 
-            foreach (Employee human in employees)
+            foreach (var human in employees)
                 Console.WriteLine(human.Name + " is " + human.Age);
+
+            //Console.Clear();
+            
+
+
+
+
+
 
             Console.ReadKey();
         }
