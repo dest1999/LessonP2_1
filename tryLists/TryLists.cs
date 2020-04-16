@@ -70,10 +70,6 @@ namespace tryLists
         }
     }
 
-
-
-    class Program
-    {
         class Tst
         {
             public void printFromTstClass()
@@ -81,14 +77,24 @@ namespace tryLists
                 Console.WriteLine("this Line is printFromTstClass from testClass");
                 Console.ReadKey();
             }
-        }
+
+            public int tryLambda(int i) => i * i+5;
+        }    
+
+    class TryLists
+    {
+
 
 
         static void Main(string[] args)
         {
+           
+
 
             Tst tst = new Tst();
             tst.printFromTstClass();
+
+            Console.WriteLine(tst.tryLambda(5));
 
             SortedList<uint, Employee> sortedListEmployees = new SortedList<uint, Employee>();
 

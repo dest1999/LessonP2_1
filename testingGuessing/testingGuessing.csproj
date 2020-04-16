@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E913BA29-E08C-453E-89C8-2D210C6CFA89}</ProjectGuid>
+    <ProjectGuid>{94FFD706-0A09-4AC5-B646-0BC4A5E5525F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>tryLists</RootNamespace>
-    <AssemblyName>tryLists</AssemblyName>
+    <RootNamespace>testingGuessing</RootNamespace>
+    <AssemblyName>testingGuessing</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TryLists.cs" />
+    <Compile Include="testingGues.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

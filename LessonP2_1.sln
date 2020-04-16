@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asteroids", "Asteroids\Aste
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tryLists", "tryLists\tryLists.csproj", "{E913BA29-E08C-453E-89C8-2D210C6CFA89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testingGuessing", "testingGuessing\testingGuessing.csproj", "{94FFD706-0A09-4AC5-B646-0BC4A5E5525F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{E913BA29-E08C-453E-89C8-2D210C6CFA89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E913BA29-E08C-453E-89C8-2D210C6CFA89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E913BA29-E08C-453E-89C8-2D210C6CFA89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94FFD706-0A09-4AC5-B646-0BC4A5E5525F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94FFD706-0A09-4AC5-B646-0BC4A5E5525F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94FFD706-0A09-4AC5-B646-0BC4A5E5525F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94FFD706-0A09-4AC5-B646-0BC4A5E5525F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
